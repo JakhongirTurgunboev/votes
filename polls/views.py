@@ -62,7 +62,9 @@ def votes(request):
                     )
                     new_vote.save()
 
-            return redirect('login')
+                return redirect('login')
+            else:
+                return render(request, 'voting.html')
     else:
         return redirect('login')
 
